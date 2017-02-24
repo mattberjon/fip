@@ -11,6 +11,7 @@ with open('CHANGELOG.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
+    'requests==2.13.0',
     # TODO: put package requirements here
 ]
 
