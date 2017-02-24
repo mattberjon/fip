@@ -9,8 +9,10 @@ Contents:
    readme
    installation
    usage
+   api
    contributing
-   authorshistory
+   authors
+   changelog
 
 Indices and tables
 ==================
