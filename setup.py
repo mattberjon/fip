@@ -19,7 +19,7 @@ test_requirements = [
 ]
 
 setup(
-    name='fip_music',
+    name='fip',
     version='0.1.0',
     description="Read and store current music played on FIP radio",
     long_description=readme + '\n\n' + history,
@@ -33,7 +33,7 @@ setup(
                  'fip'},
     entry_points={
         'console_scripts': [
-            'fip=fip_music.cli:main'
+            'fip=fip.cli:main'
         ]
     },
     include_package_data=True,
