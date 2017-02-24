@@ -22,11 +22,11 @@ test_requirements = [
 setup(
     name='fip',
     version='0.1.0',
-    description="Read and store current music played on FIP radio",
+    description="Get and store the current song information from FIP radio",
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
     author_email='matthieu@berjon.net',
-    url='https://github.com/mattberjon/fip_music',
+    url='https://github.com/mattberjon/fip',
     packages=[
         'fip',
     ],
@@ -41,7 +41,7 @@ setup(
     install_requires=requirements,
     license="Apache Software License 2.0",
     zip_safe=False,
-    keywords='fip_music',
+    keywords='fip',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
