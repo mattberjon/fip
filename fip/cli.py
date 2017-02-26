@@ -15,16 +15,23 @@ def version_msg():
 
 
 def display(data):
-    title = "Title: {0}".format(data['title'])
-    artist = "Artist: {0}".format(data['authors'])
-    album = "Album: {0} ({1})".format(
-            data['titreAlbum'],
-            data['anneeEditionMusique'])
-    label = "Label: {0}".format(data['label'])
-    print(title)
-    print(artist)
-    print(album)
-    print(label)
+    if data['title']:
+        title = "Title: {0}".format(data['title'])
+        print(title)
+
+    if data['authors']:
+        artist = "Artist: {0}".format(data['authors'])
+        print(artist)
+
+    if data['titreAlbum']:
+        album = "Album: {0} ({1})".format(
+                data['titreAlbum'],
+                data['anneeEditionMusique'])
+        print(album)
+
+    if data['label']:
+        label = "Label: {0}".format(data['label'])
+        print(label)
 
 
 @click.command(context_settings=dict(help_option_names=['-h', '--help']))
