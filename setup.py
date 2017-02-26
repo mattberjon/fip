@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='fip',
-    version='0.2.0',
+    version='0.2.1',
     description="Get and store the current song information from FIP radio",
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
