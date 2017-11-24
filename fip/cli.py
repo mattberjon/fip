@@ -15,22 +15,22 @@ def version_msg():
 
 
 def display(data):
-    if data['title']:
-        title = "Title: {0}".format(data['title'])
+    if data.get('title'):
+        title = "Title: {0}".format(data.get('title'))
         print(title)
 
-    if data['authors']:
+    if data.get('authors'):
         artist = "Artist: {0}".format(data['authors'])
         print(artist)
 
-    if data['titreAlbum']:
+    if data.get('titreAlbum'):
         album = "Album: {0} ({1})".format(
-                data['titreAlbum'],
-                data['anneeEditionMusique'])
+                data.get('titreAlbum'),
+                data('anneeEditionMusique'))
         print(album)
 
-    if data['label']:
-        label = "Label: {0}".format(data['label'])
+    if data.get('label'):
+        label = "Label: {0}".format(data.get('label'))
         print(label)
 
 
