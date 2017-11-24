@@ -47,4 +47,4 @@ class Fip():
         self.data = data['steps'][self.uid]
 
     def save_data(self):
-        pass
+        return NotImplemented
