@@ -3,6 +3,7 @@
 from . import __version__
 import click
 import sys
+from datetime import datetime
 from . import fip
 
 
@@ -15,6 +16,7 @@ def version_msg():
 
 
 def display(data):
+
     if data.get('title'):
         title = "Title: {0}".format(data.get('title'))
         print(title)
@@ -32,6 +34,20 @@ def display(data):
     if data.get('label'):
         label = "Label: {0}".format(data.get('label'))
         print(label)
+
+    if data.get('start'):
+        start = "Starts at: {0}".format(date_from_timestamp(data.get('start')))
+        print('------')
+        print(start)
+
+    if data.get('end'):
+        stop = "Stops at: {0}".format(date_from_timestamp(data.get('end')))
+        print(stop)
+
+
+def date_from_timestamp(timestamp):
+    date = datetime.fromtimestamp(int(timestamp)).strftime('%Y-%m-%d %H:%M:%S')
+    return date
 
 
 @click.command(context_settings=dict(help_option_names=['-h', '--help']))
