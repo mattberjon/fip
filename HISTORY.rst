@@ -2,6 +2,40 @@
 History
 =======
 
+0.2.4 (2017-11-27)
+------------------
+
+Added
+^^^^^
+
+- timestamp to date function
+- get the keys from the JSON flow
+
+Changed
+^^^^^^^
+
+- documentation update (available keys in the JSON flow)
+- request_data() renamed into get_date() method
+- display function CLI
+
+Deprecated
+^^^^^^^^^^
+
+Removed
+^^^^^^^
+
+- None
+
+Fixed
+^^^^^
+
+- None
+
+Security
+^^^^^^^^
+
+- None
+
 0.2.1 (2017-02-26)
 ------------------
 
