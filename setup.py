@@ -29,7 +29,7 @@ test_requirements = [
 
 setup(
     name='fip',
-    version='0.1.0',
+    version='0.2.1',
     description="Read and extract current music information played on Fip radio station.",
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
