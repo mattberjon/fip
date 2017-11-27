@@ -2,6 +2,8 @@
 FIP music
 ===============================
 
+.. image:: https://img.shields.io/pypi/v/fip.svg
+        :target: https://pypi.python.org/pypi/fip
 
 .. image:: https://img.shields.io/travis/mattberjon/fip.svg
         :target: https://travis-ci.org/mattberjon/fip
@@ -9,6 +11,10 @@ FIP music
 .. image:: https://readthedocs.org/projects/fip/badge/?version=latest
         :target: https://fip.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/mattberjon/fip/shield.svg
+     :target: https://pyup.io/repos/github/mattberjon/fip/
+     :alt: Updates
 
 
 Read and store current music played on FIP radio
@@ -30,5 +36,8 @@ Usage
 
   # Save the current song information on your server
   $ fip --save
+
+  # Get the help
+  $ fip --help
 
 For more information, you can refer to the documentation of the project.
