@@ -4,7 +4,7 @@ from . import __version__
 import click
 import sys
 from datetime import datetime
-from . import fip
+from .fip import Fip
 
 
 def version_msg():
@@ -17,36 +17,30 @@ def version_msg():
 
 def display(data):
 
-    if data.get('title'):
-        title = "Title: {0}".format(data.get('title'))
-        print(title)
+    title = "Title: {0}".format(data.get_key('title'))
+    print(title)
 
-    if data.get('authors'):
-        artist = "Artist: {0}".format(data['authors'])
-        print(artist)
+    artist = "Artist: {0}".format(data.get_key('authors'))
+    print(artist)
 
-    if data.get('titreAlbum'):
-        album = "Album: {0} ({1})".format(
-                data.get('titreAlbum'),
-                data.get('anneeEditionMusique'))
-        print(album)
+    album = "Album: {0} ({1})".format(
+            data.get_key('titreAlbum'),
+            data.get_key('anneeEditionMusique'))
+    print(album)
 
-    if data.get('label'):
-        label = "Label: {0}".format(data.get('label'))
-        print(label)
+    label = "Label: {0}".format(data.get_key('label'))
+    print(label)
 
-    if data.get('start'):
-        start = "Starts at: {0}".format(date_from_timestamp(data.get('start')))
-        print('------')
-        print(start)
-
-    if data.get('end'):
-        stop = "Stops at: {0}".format(date_from_timestamp(data.get('end')))
-        print(stop)
+    print('------')
+    time = "The {0} at {1} until {2}".format(
+            date_from_timestamp(data.get_key('start'), '%Y-%m-%d'),
+            date_from_timestamp(data.get_key('start'), '%H:%M:%S'),
+            date_from_timestamp(data.get_key('end'), '%H:%M:%S'))
+    print(time)
 
 
-def date_from_timestamp(timestamp):
-    date = datetime.fromtimestamp(int(timestamp)).strftime('%Y-%m-%d %H:%M:%S')
+def date_from_timestamp(timestamp, date_format='%Y-%m-%d %H:%M:%S'):
+    date = datetime.fromtimestamp(int(timestamp)).strftime(date_format)
     return date
 
 
@@ -74,11 +68,11 @@ def date_from_timestamp(timestamp):
     help='Ouput the version of this application')
 def main(current_song, next_song, save):
     if current_song:
-        data = fip.Fip()
-        data.request_data()
-        display(data.data)
+        fip_data = Fip()
+        fip_data.get_data()
+        display(fip_data)
     elif next_song:
-        data = fip.Fip()
+        data = Fip()
         data.request_data(offset=1)
         display(data.data)
 
