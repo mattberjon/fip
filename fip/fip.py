@@ -32,8 +32,9 @@ class Fip():
     def get_data(self, offset=0):
         """ Get the data from the server
 
-        Send a request to the FIP server to grab a specific JSON file containing
-        the information related to lastest songs played on the radio.
+        Send a request to the FIP server to grab a specific JSON file
+        containing the information related to lastest songs played on the
+        radio.
 
         Args:
             offset (int):   Offset to grab the next song information (but could
@@ -45,6 +46,18 @@ class Fip():
         position = level['position'] + offset
         self.uid = level['items'][position]
         self.data = data['steps'][self.uid]
+
+    def get_key(self, name):
+        """ Return the data according to its key
+
+        Args:
+            name (str): Name of the key to get.
+
+        Returns:
+            String: return the data according to its key or None:
+
+        """
+        return self.data.get(name)
 
     def save_data(self):
         return NotImplemented
