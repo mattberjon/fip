@@ -20,6 +20,9 @@ FIP music
      :target: https://coveralls.io/github/mattberjon/fip?branch=master
      :alt: Coverage status
 
+.. image:: https://img.shields.io/pypi/v/fip.svg
+    :target: https://pypi.python.org/pypi/fip/
+    :alt: Pypi version
 
 
 Read and store current music played on FIP radio
