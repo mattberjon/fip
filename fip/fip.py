@@ -29,10 +29,10 @@ class Fip():
         self.data = {}
         self.uid = []
 
-    def request_data(self, offset=0):
-        """ Request the data to the server
+    def get_data(self, offset=0):
+        """ Get the data from the server
 
-        Send a request to the server to grab a specific JSON file containing
+        Send a request to the FIP server to grab a specific JSON file containing
         the information related to lastest songs played on the radio.
 
         Args:
