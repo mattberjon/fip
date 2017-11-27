@@ -19,7 +19,6 @@ requirements = [
 
 setup_requirements = [
     'pytest-runner',
-    # TODO(mattberjon): put setup requirements (distutils extensions, etc.) here
 ]
 
 test_requirements = [
@@ -30,7 +29,8 @@ test_requirements = [
 setup(
     name='fip',
     version='0.2.4',
-    description="Read and extract current music information played on Fip radio station.",
+    description="Read and extract current music information played on Fip\
+            radio station.",
     long_description=readme + '\n\n' + history,
     author="Matthieu Berjon",
     author_email='matthieu@berjon.net',
@@ -52,7 +52,6 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
