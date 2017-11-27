@@ -16,6 +16,11 @@ FIP music
      :target: https://pyup.io/repos/github/mattberjon/fip/
      :alt: Updates
 
+.. image:: https://coveralls.io/repos/github/mattberjon/fip/badge.svg?branch=master
+     :target: https://coveralls.io/github/mattberjon/fip?branch=master
+     :alt: Coverage status
+
+
 
 Read and store current music played on FIP radio
 
