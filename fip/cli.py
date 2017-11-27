@@ -28,7 +28,7 @@ def display(data):
     if data.get('titreAlbum'):
         album = "Album: {0} ({1})".format(
                 data.get('titreAlbum'),
-                data('anneeEditionMusique'))
+                data.get('anneeEditionMusique'))
         print(album)
 
     if data.get('label'):
