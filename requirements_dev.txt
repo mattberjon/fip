@@ -2,9 +2,8 @@ pip==9.0.1
 bumpversion==0.5.3
 wheel==0.30.0
 watchdog==0.8.3
-coverage==4.4.2
 Sphinx==1.6.7
-Sphinx==1.6.7
+coverage==4.5
 sphinxcontrib-napoleon==0.6.1
 tox==2.9.1
 pytest==3.4.0
