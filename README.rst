@@ -25,8 +25,10 @@ FIP music
     :alt: Pypi version
 
 
-Read and store current music played on FIP radio
+Read the current and next track played on FIP radio
 
+**WARNING: at this early stage of the development, don't even think about any
+backward compatibility.**
 
 * Free software: Apache Software License 2.0
 * Documentation: https://fip.readthedocs.io.
@@ -41,9 +43,6 @@ Usage
 
   # Get the information on the next song being played
   $ fip --next-song
-
-  # Save the current song information on your server
-  $ fip --save
 
   # Get the help
   $ fip --help
