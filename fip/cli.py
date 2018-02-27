@@ -72,9 +72,9 @@ def main(current_song, next_song, save):
         fip_data.get_data()
         display(fip_data)
     elif next_song:
-        data = Fip()
-        data.request_data(offset=1)
-        display(data.data)
+        fip_data = Fip()
+        fip_data.get_data(offset=1)
+        display(fip_data)
 
 
 if __name__ == "__main__":
