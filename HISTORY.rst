@@ -2,6 +2,20 @@
 History
 =======
 
+0.2.5 (2018-02-27)
+------------------
+
+Changed
+^^^^^^^
+
+- usage part in the README file (removal of the 'save' command)
+
+Fixed
+^^^^^
+
+- documentation installation update
+- correct renaming of get_data method 
+
 0.2.4 (2017-11-27)
 ------------------
 
@@ -15,7 +29,7 @@ Changed
 ^^^^^^^
 
 - documentation update (available keys in the JSON flow)
-- request_data() renamed into get_date() method
+- request_data() renamed into get_data() method
 - display function CLI
 
 Deprecated
