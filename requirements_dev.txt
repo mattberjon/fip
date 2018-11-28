@@ -5,7 +5,7 @@ Sphinx==1.8.2
 watchdog==0.9.0
 coverage==4.5.2
 sphinxcontrib-napoleon==0.7
-pytest==4.0.0
+pytest==4.0.1
 tox==3.5.3
 flake8==3.6.0
 pyflakes==2.0.0
