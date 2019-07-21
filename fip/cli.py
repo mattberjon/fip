@@ -17,31 +17,17 @@ def version_msg():
 
 def display(data):
 
-    title = "Title: {0}".format(data.get_key('title'))
+    title = "Title: {0}".format(data.get_title())
     print(title)
 
-    artist = "Artist: {0}".format(data.get_key('authors'))
+    artist = "Artist: {0}".format(data.get_artist())
     print(artist)
 
-    album = "Album: {0} ({1})".format(
-            data.get_key('titreAlbum'),
-            data.get_key('anneeEditionMusique'))
+    album = "Album: {0}".format(data.get_album())
     print(album)
 
-    label = "Label: {0}".format(data.get_key('label'))
+    label = "Label: {0}".format(data.get_label())
     print(label)
-
-    print('------')
-    time = "The {0} at {1} until {2}".format(
-            date_from_timestamp(data.get_key('start'), '%Y-%m-%d'),
-            date_from_timestamp(data.get_key('start'), '%H:%M:%S'),
-            date_from_timestamp(data.get_key('end'), '%H:%M:%S'))
-    print(time)
-
-
-def date_from_timestamp(timestamp, date_format='%Y-%m-%d %H:%M:%S'):
-    date = datetime.fromtimestamp(int(timestamp)).strftime(date_format)
-    return date
 
 
 @click.command(context_settings=dict(help_option_names=['-h', '--help']))
@@ -56,6 +42,11 @@ def date_from_timestamp(timestamp, date_format='%Y-%m-%d %H:%M:%S'):
     is_flag=True,
     help='Display the next song information')
 @click.option(
+    '-p',
+    '--previous-song',
+    is_flag=True,
+    help='Display the previous song information')
+@click.option(
     '-s',
     '--save',
     is_flag=True,
@@ -66,14 +57,21 @@ def date_from_timestamp(timestamp, date_format='%Y-%m-%d %H:%M:%S'):
     '--version',
     message=version_msg(),
     help='Ouput the version of this application')
-def main(current_song, next_song, save):
+def main(current_song, next_song, previous_song, save):
     if current_song:
         fip_data = Fip()
         fip_data.get_data()
+        fip_data.get_current()
         display(fip_data)
     elif next_song:
         fip_data = Fip()
-        fip_data.get_data(offset=1)
+        fip_data.get_data()
+        fip_data.get_next()
+        display(fip_data)
+    elif previous_song:
+        fip_data = Fip()
+        fip_data.get_data()
+        fip_data.get_prev()
         display(fip_data)
 
 
