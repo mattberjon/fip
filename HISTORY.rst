@@ -2,6 +2,16 @@
 History
 =======
 
+0.3.0 (2019-07-21)
+------------------
+
+Changes
+^^^^^^^
+
+- FIP API
+- Adding of the previous song retrieval (n-1 occurence only)
+- Documentation update
+
 0.2.5 (2018-02-27)
 ------------------
 

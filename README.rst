@@ -44,6 +44,9 @@ Usage
   # Get the information on the next song being played
   $ fip --next-song
 
+  # Get the information of the previous song played
+  $ fip --previous-song
+
   # Get the help
   $ fip --help
 
