@@ -3,6 +3,8 @@
 from . import __version__
 import click
 import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 from datetime import datetime
 from .fip import Fip
 
