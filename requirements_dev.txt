@@ -11,5 +11,5 @@ flake8==3.7.9
 pyflakes==2.1.1
 pyyaml>=4.2b1
 cryptography==2.8
-coveralls==1.8.2
+coveralls==1.10.0
 twine==3.1.0
