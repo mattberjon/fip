@@ -6,7 +6,7 @@ watchdog==0.10.3
 coverage==5.3
 sphinxcontrib-napoleon==0.7
 flake8==3.8.4
-tox==3.20.0
+tox==3.20.1
 pytest==6.1.1
 pyflakes==2.2.0
 pyyaml>=4.2b1
