@@ -5,7 +5,7 @@ wheel==0.36.2
 watchdog==2.0.2
 coverage==5.5
 sphinxcontrib-napoleon==0.7
-flake8==3.8.4
+flake8==3.9.0
 tox==3.23.0
 pytest==6.2.2
 pyflakes==2.2.0
