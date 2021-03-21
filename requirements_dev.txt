@@ -1,4 +1,4 @@
-Sphinx==3.5.2
+Sphinx==3.5.3
 pip==21.0.1
 bumpversion==0.6.0
 wheel==0.36.2
